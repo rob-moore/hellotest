@@ -8,20 +8,19 @@ namespace HelloTest
         public static void Main(string[] args)
         {
             // Pick random number
-
             var random = new Random();
-            var randomNumber = random.Next(1, 10);
+            int randomNumber = random.Next(1, 10);
             
             // Prompt user to guess
             Console.WriteLine("Pick a number between 1 and 10");
            
-            // if correct end
             var running = true;
             while (running)
             {
                 var guess = Console.ReadLine();
                 int.TryParse(guess, out int guessInt);
                 
+                // if correct end
                 if (guessInt == randomNumber)
                 {
                     Console.WriteLine("Nice job");
@@ -40,7 +39,6 @@ namespace HelloTest
                 }
             }
             
-
         }
     }
 }
